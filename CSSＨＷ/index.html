@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <style>
+      /* Desktop */
+      @media screen and (min-width: 576px) {
+        .header {
+          width: 100%;
+          height: 225px;
+          background: rgb(23, 183, 200);
+          flex-wrap: wrap;
+          /* padding: 3px 0 0 3px; */
+        }
+        .border-img {
+          border-bottom: 8px solid;
+          border-image: url(../assets/header_l.jpg) 0 0 8 0 repeat;
+        }
+        .nav-container {
+          height: 50px;
+          display: inline-block;
+          padding: 10px 0 0 10px;
+        }
+        .nav-img1 {
+          height: 40px;
+        }
+        .container1 {
+          display: flex;
+          margin: -60px auto 0 auto;
+          align-items: center;
+          justify-content: center;
+          width: 500px;
+          height: 150px;
+          /* background: pink; */
+          overflow: hidden;
+        }
+        .img2 {
+          width: 150%;
+          transform: translate(0, 5%);
+        }
+        .title-bar {
+          max-width: 100%;
+          width: 640px;
+          margin-inline: auto;
+        }
+        .title-bar-font {
+          text-decoration: none;
+          text-align: center;
+        }
+        .title-bar ul {
+          padding-inline-start: 0;
+          display: flex;
+          justify-content: center;
+          text-wrap: nowrap;
+        }
+        .title-bar li {
+          list-style-type: none;
+          line-height: 2rem;
+          margin-inline: 15px;
+          border-radius: 40px;
+          padding: 3px 17px;
+        }
+        .title-bar li:hover {
+          background-color: #fff000;
+        }
+        .title-bar ul li a {
+          color: black;
+          text-decoration: none;
+        }
+        .title-bar ul li a:visited {
+          text-decoration: none;
+        }
+        .active {
+          background-color: #fff000;
+        }
+        .icon1{
+          width: 36px;
+          height: 36px;
+          background-image: url(../assets/m_menu.png);
+          background-position: left -72px;
+          background-color: #055260;
+          border-radius: 50%;
+          position: absolute;
+          right: 15px;
+          top: 60px;
+        }
+        .icon2{
+          width: 36px;
+          height: 36px;
+          background-image: url(../assets/m_menu.png);
+          background-position: left -325px;
+          position: absolute;
+          border-radius: 50%;
+          background-color: #055260;
+          right: 15px;
+          top: 100px;
+        }
+        .header-bottom-border {
+          position: absolute;
+          top: 3px;
+          pointer-events: none;
+        }
+
+        .main-bg {
+          background: url(../assets/bg.jpg);
+          /* height: 1000px; */
+          /* margin-top: -40px; */
+        }
+        .main-slogan {
+          display: flex;
+          justify-content: center;
+          padding-top: 40px;
+        }
+        .main-slogan-font h1 {
+          color: rgb(14, 111, 128);
+          font-size: 30px;
+          font-weight: 500;
+        }
+        .p-title {
+          height: 100px;
+          position: relative;
+        }
+        .p-title-sm{
+          display: none;
+        }
+        .hat-img {
+          object-fit: contain;
+          position: relative;
+          left: -670px;
+          top: 95px;
+        }
+
+        .main-content1 {
+          margin-inline: auto;
+          text-align: center;
+          font-size: 17px;
+          line-height: 1.7rem;
+        }
+        .main-content-font{
+          color: #525252;
+        }
+        .br-sm{
+          display: none;
+        }
+        .main-content-box {
+          max-width: 860px;
+          padding-block: 10px;
+          margin-inline: auto;
+          margin-top: 70px;
+          margin-bottom: 100px;
+          border: 1px solid #1f8597;
+          border-radius: 30px;
+          display: flex;
+          position: relative;
+          background: white;
+          justify-content: center;
+        }
+        .content-title-circle {
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          background: #1f8597;
+          position: absolute;
+          top: -60px;
+          left: -30px;
+          color: white;
+          text-align: center;
+          flex-shrink: 0;
+          /* padding-top: 10px; */
+        }
+        .main-content-font {
+          line-height: 30px;
+          font-style: 16px;
+          /* text-wrap: nowrap; */
+          margin-left: 60px;
+        }
+        .main-content-bluefont {
+          color: #055260;
+          font-weight: 700;
+        }
+        .circle-p {
+          font-size: 22px;
+          padding-top: 5px;
+        }
+        .main-content-hight {
+          height: 525px;
+        }
+        .girl1 {
+          /* width: 100%; */
+          height: 366px;
+          flex-shrink: 0;
+          margin-top: -280px;
+          margin-left: 0;
+        }
+        .main-content-bluefont2 {
+          color: #055260;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+        .girl2 {
+          position: absolute;
+          left: -30px;
+          height: 330px;
+        }
+        .way-p {
+          position: absolute;
+          right: 40px;
+        }
+        .justify-content-left {
+          justify-content: left;
+        }
+        .main-content-hight2 {
+          height: 325px;
+        }
+        .line-height {
+          line-height: 25px;
+        }
+        .margin-bottom-0 {
+          margin-bottom: 0px;
+        }
+        .div-footer {
+          background: url(../assets/bg.jpg);
+          height: 50px;
+        }
+        .footer {
+          background: black;
+        }
+        .footer-content{
+          display: flex;
+          justify-content: center;
+          padding-block: 15px;
+          border-bottom: 0.5px solid gray;
+        }
+        .circle-1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #b3b3b3;
+          background: #5e5e5e;
+          width: 50px;
+          height: 50px;
+          font-size: 14px;
+          border-radius: 50%;
+        }
+        .footer-font {
+          color: #999999;
+          font-size: 12px;
+        }
+        .footer-img{
+          height: 50px;
+          margin-left: 10px;
+        }
+        .display-block{
+          display: inline-block;
+          margin-block: 10px;
+        }
+        .space{
+          width: 30px;
+        }
+        .copy-right-bar{
+          display: flex;
+          justify-content: center;
+        }
+        .way-p-sm{
+          display: none;
+        }
+        .footer-mobil{
+          display: none;
+        }
+      }
+      /* mobil */
+      @media screen and (max-width: 576px) {
+        body {
+          background: url(../assets/bg.jpg);
+        }
+        .br-lg{
+          display: none;
+        }
+        .header{
+          display: flex;
+          height: 200px;
+          width: 100%;
+          background: rgb(23, 183, 200);
+          align-items: center;
+        }
+        .border-img{
+          border-bottom: 8px solid;
+          border-image: url(../assets/header_l.jpg) 0 0 8 0 repeat;
+        }
+        .nav-container{
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+        .nav-img1{
+          /* height: 40px; */
+          width: 280px;
+        }
+        .container1{
+          margin-inline: auto;
+          width: 500px;
+          height: 200px;
+          background: url(../assets/title.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center 65%;
+        }
+        .img2{
+          display: none;
+        }
+        .title-bar{
+          /* align-self: flex-end; */
+          display: none;
+        }
+        .icon{
+          position: relative;
+        }
+        .icon-sm{
+          width: 36px;
+          height: 36px;
+          background-image: url(../assets//m_menu.png);
+          background-color: #055260;
+          border-radius: 50%;
+          position: absolute;
+          top: -85px;
+          right: 10px;
+        }
+        .icon1{
+          display: none;
+        }
+        .icon2{
+          display: none;
+        }
+        .main-bg{
+          background: url(../assets/bg.jpg);
+        }
+        .main-slogan{
+          /* width: 100%; */
+          display: flex;
+          justify-content: center;
+        }
+        .main-slogan-font{
+          position: relative;
+        }
+        .p-title-sm{
+
+        }
+        .p-title{
+          display: none;
+        }
+        .hat-img{
+          display: none;
+        }
+        .main-content1{
+          margin-inline: auto;
+          text-align: center;
+          font-size: 17px;
+          line-height: 1.7rem;
+        }
+        .main-content-font{
+          color: #525252;
+        }
+        .main-content-box{
+          margin: 65px 25px 20px 25px;
+          padding: 35px 20px 20px 20px;
+          border: 1px solid #1f8597;
+          border-radius: 30px;
+          display: flex;
+          position: relative;
+          background: white;
+          justify-content: center;
+        }
+        .content-title-circle{
+          border-radius: 50%;
+          width: 90px;
+          height: 90px;
+          background: #1f8597;
+          position: absolute;
+          top: -45px;
+          justify-self: center;
+          color: white;
+          text-align: center;
+          flex-shrink: 0;
+          align-content: center;
+        }
+        .circle-p{
+          font-size: 22px;
+        }
+        .main-content{
+
+        }
+        /* .margin-left{
+          margin-left: -100px;
+        } */
+        .p-test{
+          display: inline-block;
+          justify-content: left;
+        }
+        .main-content-font{
+          line-height: 30px;
+          font-size: 16px;
+        }
+        .main-content-bluefont{
+          color: #055260;
+          font-weight: 700;
+        }
+        .main-content-bluefont2{
+          color: #055260;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+        .girl1{
+          display: none;
+        }
+        .way-p{
+          display: none;
+        }
+        .girl2{
+          display: none;
+        }
+        .br-circle{
+          display: none;
+        }
+        .way-p-sm{
+          display: flex;
+          margin-inline: auto;
+          justify-content: center;
+          max-width: 300px;
+          /* object-fit: contain; */
+        }
+        .way-p-sm-img{
+          width:368px;
+        }
+        .main-content-hight2{
+          min-height: 500px;
+        }
+        .main-content-font{
+          line-height: 22.85px;
+          color: #6a6a6a;
+        }
+        .main-content-bluefont{
+          color: #055260;
+        }
+        .footer {
+          display: none;
+        }
+        .footer-mobil{
+          /* margin: auto; */
+          background: #2a2a2a;
+
+        }
+        .footer-container{
+          /* margin-inline: auto; */
+          text-align: center;
+        }
+        .footer-title{
+          color: white;
+          display: inline-block;
+          /* padding-block: -5px; */
+          margin-block: 5px;
+        }
+        .footer-img-mobil{
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 500px;
+          /* height: 112px; */
+          background: #000;
+        }
+        .footer-img-div{
+          padding-block: 5px;
+          display: flex;
+          object-fit: contain;
+          justify-content: center;
+          width: 249px;
+          height: 56px;
+          border: 0.5px solid #2a2a2a;
+        }
+        .footer-img{
+          max-width: 200px;
+        }
+        .copy-right-bar{
+          display: flex;
+          justify-content: center;
+          background: #000;
+        }
+        .display-block{
+          display: inline-block;
+          margin-block: 10px;
+        }
+        .footer-font {
+          color: #999999;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Header -->
+
+    <header class="header border-img">
+      <div class="nav-container">
+        <img class="nav-img1" src="../assets/logo_top.png" alt="" />
+      </div>
+      <div class="container1">
+        <img class="img2" src="../assets/fb_img0.jpg" alt="" />
+      </div>
+      <div class="title-bar title-bar-font">
+        <ul>
+          <li class="active"><a href="">活動辦法</a></li>
+          <li><a href="">全台海選</a></li>
+          <li><a href="">TOP12決賽</a></li>
+          <li><a href="">制服辣秘辛</a></li>
+        </ul>
+      </div>
+      <div class="icon">
+        <div class="icon-sm"></div>
+        <div class="icon1"></div>
+        <div class="icon2"></div>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main class="main-bg">
+
+      <!-- Section1 -->
+
+      <div class="main-slogan">
+        <img class="p-title-sm" src="../assets/p_title_m.png" alt="">
+        <img class="p-title" src="../assets/p_title.png" alt="" />
+        <img class="hat-img" src="../assets/hat.png" alt="" />
+      </div>
+      <div class="main-content1 main-content-font">
+        <p>
+          專屬高校生的青春印記
+          <br />
+          第三屆畢業季高校制服大賞熱血開跑！
+          <br />
+          網羅全台逾500所高中校園制服進行強烈的廝殺票選
+          <br />
+          究竟是純潔無敵白襯衫、萬年不敗的水手服
+          <br />
+          還是充滿萌味的連身款能奪下最終勝利呢?
+          <br />
+          在即將來臨的畢業季，<span class="br-sm" srcset=""><br></span>為自己的學校制服再添一筆輝煌記事吧！
+          <br />
+          今年，2016的制服大賞，你投哪一家！
+        </p>
+      </div>
+
+      <!-- Section2 -->
+
+      <div>
+        <div class="main-content-box justify-content-left">
+          <div class="content-title-circle">
+            <p class="circle-p">活動<br />時間</p>
+          </div>
+          <p class="main-content-font p-test">
+            <span class="main-content-bluefont">第一階段－全台海選：</span
+            ><span class="br-sm" srcset=""><br></span>2016/04/11－04/29，23:59止
+            <br />
+            <span class="main-content-bluefont"
+              >第二階段－TOP12決賽 <span class="br-sm" srcset=""><br></span>(最佳人氣/最萌女校服/最鮮男校服)：<span class="br-sm" srcset=""><br></span></span
+            >2016/05/09－05/27，23:59止
+            <br>
+            <span class="main-content-bluefont">得獎公佈：<span class="br-sm" srcset=""><br></span></span>2016/06/08
+            公布於同網頁，敬請密切注意！
+          </p>
+          <img class="girl1" src="../assets/girl1.png" alt="" />
+        </div>
+
+        <!-- Section3 -->
+
+        <div class="main-content-box justify-content-left">
+          <div class="content-title-circle">
+            <p class="circle-p">賽程<br />說明</p>
+          </div>
+          <div class="main-content main-content-hight">
+            <p class="main-content-font">
+              <span class="main-content-bluefont2">第一階段－全台海選</span
+              >：<span class="br-sm" srcset=""><br></span>請進入制服地圖活動頁面，登入FB帳號即可投票，每日每帳號可投20票，同項目
+              <span class="br-lg"><br /></span>
+              不可重複投票。
+              <br>
+              <span class="main-content-bluefont2"
+                >第二階段－TOP12決賽
+                </span>
+                <span class="br-sm" srcset=""><br></span>
+                <span class="main-content-bluefont2">(最佳人氣/最萌女校服/最鮮男校服)</span>：請進入 SETN.com 三立新聞網活動頁面，
+                <span class="br-lg"><br /></span>
+              登入FB帳號即可投票，每小時每帳號可投6票，同項目不可重複投票。
+            </p>
+            <div class="way-p-sm">
+              <img class="way-p-sm-img" src="../assets/way_mobile.jpg" alt="">
+            </div>
+            <img class="way-p" src="../assets/way_p.jpg" alt="" />
+            <img class="girl2" src="../assets/girl2.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Section4 -->
+
+        <div class="main-content-box justify-content-left">
+          <div class="content-title-circle">
+            <p class="circle-p">活動<br />獎項</p>
+          </div>
+          <div class="main-content main-content-hight2">
+            <p class="main-content-font">
+              <span class="main-content-bluefont">參加獎</span
+              >：凡參加投票者皆具備抽獎資格，共11名。
+              <br />
+              <span class="main-content-bluefont">神準獎</span
+              >：精準預測前12強之投票者，即有機會獲得00000，共x名。
+              <br />
+              <span class="main-content-bluefont">應援獎</span
+              >：應援冠軍隊伍之投票者，即有機會獲得00000，共xX名。
+              <br />
+              <span class="main-content-bluefont">讚聲獎</span
+              >：活動期間，分享活動訊息至FB皆具備抽獎資格，共xX名。
+            </p>
+          </div>
+        </div>
+
+        <!-- Section5 -->
+
+        <div class="main-content-box justify-content-left margin-bottom-0">
+          <div class="content-title-circle">
+            <p class="circle-p">注意<br />事項</p>
+          </div>
+          <div class="main-content">
+            <p class="main-content-font line-height">
+              <span class="main-content-bluefont">01.</span>
+              參賽者及參與投票網友所提供之個人資料，僅作為抽獎、寄發中獎通知及主辦單位寄發相關資訊使用。每人<br />
+              僅限一次中獎的機會，如發現重複中獎之情況或冒用他人姓名參加活動，將取消重複中獎資格。<br />
+              <br /><span class="main-content-bluefont">02.</span>
+              得獎將公布於活動網頁，中獎者將以Facebook登錄的Email進行mail通知，若在期限內未回覆正確聯絡資料者，視同放棄中獎資格。<br />
+              <br /><span class="main-content-bluefont">03.</span>
+              請確認您的得獎回傳通知所填寫的聯絡及地址資料，所有資料皆會保密，只作為獎品寄送依據。逾時未修改<br />
+              正確寄送地址、或因資料填寫不完整或不正確導致無法通知中獎時，將視為放棄領獎資格，獎項不另行補發。<br />
+              <br /><span class="main-content-bluefont">04.</span>
+              如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使寄予得獎人之獎品有遲延、遺失、<br />
+              錯誤、無法辨識或毀損之情況，主辦單位不負任何法律責任，參加者亦不得因此異議。
+              <br />
+              <br />05.
+              活動之獎品以寄送的實物為準，獎品不得轉換、轉讓或折換現金。得獎者應依政府規定，獎品價值超過<br />
+              NT$20,000以上，依國稅局規定需繳交10%稅金。<br />
+              <br /><span class="main-content-bluefont">06.</span>
+              本活動為公開良性競賽性質，參賽者不得有舞弊、或惡意攻擊訐等情事。如有以下行為主辦單位有權取消參<br />
+              加資格，並保留相關法律追訴權利：使用不當行為或程式灌票或干擾活動進行、傳播不實謠言，造成本活動或本<br />
+              公司名譽受損、違反本活動辦法及政府法令之行為等。<br />
+              <br /><span class="main-content-bluefont">07.</span>
+              本活動主辦單位，對本活動網站有絕對的管理權，並就參賽者或投票者之資格及票數有審查之權利；若經審<br />
+              認資格不符或票數有不當、不妥情事者，本活動主辦單位有權取消得獎資格或逕行刪除參賽票數且不予事先告知。<br />
+              <br /><span class="main-content-bluefont">08.</span>
+              活動辦法載明於本活動網頁中，參加者於參加本活動之同時，即視為同意並遵守本活動相關規範及注意事項。<br />
+              如本活動因不可抗力之特殊原因無法執行時，主辦單位有權決定取消、終止、修改或暫停本活動。主辦單位亦<br />
+              保有修正、暫停或終止本活動之權利，恕不另行通知。<br />
+              <br /><span class="main-content-bluefont">09.</span>
+              此活動所使用之軟體或程式及網站上所有內容，均由主辦單位擁有其智慧財產權，任何人不得逕自使用、修<br />
+              改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。若欲引用其內容，必須<br />
+              依法取得本活動主辦單位之正式書面授權。<br />
+              <br /><span class="main-content-bluefont"
+                >※本活動並非由Facebook平台贊助、管理及開發，本活動乃由
+                SETN.com三立新聞網/制服地圖主辦，並透過<br />
+                此活動網頁所提供的活動管理服務來舉辦、管理本活動，您在本活動所做的行為，與所提供的資料僅提供予主辦<br />
+                單位管理本活動使用。</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="div-footer"></div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="circle-1"><p>執行<span class="br-circle"><br></span>單位</p></div>
+          <img class="footer-img" src="../assets/f_um.png" alt="" />
+          <img class="footer-img" src="../assets/f_setn.png" alt="" />
+          <img class="footer-img" src="../assets/f_st.png" alt="" />
+          <div class="space"></div>
+          <div class="circle-1"><p>特別<span class="br-circle"><br></span>感謝</p></div>
+          <img class="footer-img" src="../assets/f_ga.png" alt="" />
+          <img class="footer-img" src="../assets/f_swanky.png" alt="" />
+          <img class="footer-img" src="../assets/f_aken.png" alt="" />
+        </div>
+      </div>
+      <div class="copy-right-bar">
+        <p class="footer-font display-block">© 2016 Sanlih E-Television</p>
+      </div>
+    </footer>
+    <footer class="footer-mobil">
+      <div class="footer-container">
+        <p class="footer-title">執行單位</p>
+      </div>
+      <div class="footer-img-mobil">
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_um.png" alt="" />
+        </div>
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_setn.png" alt="" />
+        </div>
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_st.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-container">
+        <p class="footer-title">特別感謝</p>
+      </div>
+      <div class="footer-img-mobil">
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_ga.png" alt="" />
+        </div>
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_swanky.png" alt="" />
+        </div>
+        <div class="footer-img-div">
+          <img class="footer-img" src="../assets/f_aken.png" alt="" />
+        </div>
+      </div>
+      <div class="copy-right-bar">
+        <p class="footer-font display-block">© 2016 Sanlih E-Television</p>
+      </div>
+    </footer>
+  </body>
+</html>
